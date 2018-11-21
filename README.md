@@ -34,7 +34,9 @@ Overview
 ある月での「心の底から好きになった人がいない」割合 like_parallel[%] = その月の星座での割合[%] *20日/30日 + 前月の星座での割合[%] *10日/30日 
 ```
 
+```math
 v=read.csv("./data.csv",header=T)
+```
 
 |日本名 |star |month |like_population |like_parallel |born|
 |---|:-:|:-:|:-:|:-:|:-:|
@@ -57,10 +59,10 @@ v=read.csv("./data.csv",header=T)
 
 全体に占める各月の生まれた割合からどのくらい「心の底から好きになった人がいない」星座の割合が外れているかを、Χ二乗検定で評価した。
 
+```math
 v%>%{chisq.test(.$like_parallel*1038/100,p=.$born/.$born%>%sum)}
         Chi-squared test for given probabilities
 
-```math
 data:  v$like_parallel * 1038/100
 X-squared = 131.73, df = 11, p-value < 2.2e-16
 ```
@@ -74,9 +76,9 @@ X-squared = 131.73, df = 11, p-value < 2.2e-16
 
 monthは「心の底から好きになった人がいない」割合に対して統計学的有意に説明することがわかった。
 
+```math
 lm(like_parallel~born+month,v)%>%summary
 
-```math
 Call:
 lm(formula = like_parallel ~ born + month, data = v2)
 
