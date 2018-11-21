@@ -101,9 +101,9 @@ F-statistic: 4.731 on 2 and 9 DF,  p-value: 0.03942
 
 
 ## 出典
-[2015年度学生懸賞論文（学部学生の部）第一席受賞 生まれ月が小中学生の学習・運動習慣に与える影響](https://www.waseda.jp/fcom/soc/assets/uploads/2016/11/wcom447-448_03.pdf)
-[12星座ランキング！　「心の底から好きになった人がいない」と思う星座とは](https://sirabee.com/2018/11/03/20161847984/)
-[厚生労働省　人口動態統計月報（概数）　平成２９年１２月分（年計を含む）](https://www.mhlw.go.jp/toukei/saikin/hw/jinkou/geppo/m2017/dl/all2912.pdf)
+[2015年度学生懸賞論文（学部学生の部）第一席受賞 生まれ月が小中学生の学習・運動習慣に与える影響](https://www.waseda.jp/fcom/soc/assets/uploads/2016/11/wcom447-448_03.pdf)<br>
+[12星座ランキング！　「心の底から好きになった人がいない」と思う星座とは](https://sirabee.com/2018/11/03/20161847984/)<br>
+[厚生労働省　人口動態統計月報（概数）　平成２９年１２月分（年計を含む）](https://www.mhlw.go.jp/toukei/saikin/hw/jinkou/geppo/m2017/dl/all2912.pdf)<br>
 
 
 ## Author
