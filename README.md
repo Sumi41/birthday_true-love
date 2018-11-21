@@ -23,16 +23,15 @@ Overview
 そうやってみると、意外と相対年齢効果は高いのかもしれませんね。
 
 ちょっとした疑問でしたが、サクッとそれらしい結果が出たのでついまとめてみちゃいました。
-ぼちぼち、自分が勉強してきたことをまとめてみるいい機会になりました☆
+ぼちぼち、自分が勉強してきたことをまとめてみるいい機会になりました。
 
-MarkDownはじめてで慣れない。。。
 
 ## 統計解析手法
 ### ① データの整理
 星座は前月20日ごろ-各月20日ごろを範囲としているため、月の区切りがずれてしまっている。
 今回は学年の区切りが月単位なので、以下の式で月単位で評価にするための変換をした。
 ```math
-ある月での「心の底から好きになった人がいない」割合 like_parallel`[%]` = その月の星座での割合`[%]` *20日/30日 + 前月の星座での割合`[%]` *10日/30日 
+ある月での「心の底から好きになった人がいない」割合 like_parallel[%] = その月の星座での割合[%] *20日/30日 + 前月の星座での割合[%] *10日/30日 
 ```
 
 v=read.csv("./data.csv",header=T)
@@ -61,17 +60,23 @@ v=read.csv("./data.csv",header=T)
 v%>%{chisq.test(.$like_parallel*1038/100,p=.$born/.$born%>%sum)}
         Chi-squared test for given probabilities
 
-data:  v2$like_parallel * 1038/100
+```math
+data:  v$like_parallel * 1038/100
 X-squared = 131.73, df = 11, p-value < 2.2e-16
+```
 
 「心の底から好きになった人がいない」割合には、人口の割合では説明できない偏りがあることがわかった。
+
 
 ### ③　年間を通して、2月をピークに、12月まで減少傾向があることの確認
 ここでは、簡便に時間軸に対して1月→12月での減少傾向を確認した。(1-3月を早生まれ、それ以外を通常の生まれとするならば、1月→12月で減少する様子が観察されるため)
 ついでに、あまり影響がなかったが、各月の出生数での影響を補正しておいた。
 
+monthは「心の底から好きになった人がいない」割合に対して統計学的有意に説明することがわかった。
+
 lm(like_parallel~born+month,v)%>%summary
 
+```math
 Call:
 lm(formula = like_parallel ~ born + month, data = v2)
 
@@ -90,18 +95,14 @@ Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’
 Residual standard error: 4.377 on 9 degrees of freedom
 Multiple R-squared:  0.5125,    Adjusted R-squared:  0.4042 
 F-statistic: 4.731 on 2 and 9 DF,  p-value: 0.03942
-
-
+```
 
 
 ## 出典
-https://www.waseda.jp/fcom/soc/assets/uploads/2016/11/wcom447-448_03.pdf
-https://sirabee.com/2018/11/03/20161847984/
-
-https://www.mhlw.go.jp/toukei/saikin/hw/jinkou/geppo/m2017/dl/all2912.pdf
-https://bibibi-make.com/archives/3372
+[2015年度学生懸賞論文（学部学生の部）第一席受賞 生まれ月が小中学生の学習・運動習慣に与える影響]:(https://www.waseda.jp/fcom/soc/assets/uploads/2016/11/wcom447-448_03.pdf)
+[12星座ランキング！　「心の底から好きになった人がいない」と思う星座とは]:(https://sirabee.com/2018/11/03/20161847984/)
+[厚生労働省　人口動態統計月報（概数）　平成２９年１２月分（年計を含む）]:(https://www.mhlw.go.jp/toukei/saikin/hw/jinkou/geppo/m2017/dl/all2912.pdf)
 
 
 ## Author
-
 [SUMi41](https://github.com/SUMi41)
