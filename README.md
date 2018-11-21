@@ -40,7 +40,7 @@
 v=read.csv("./data.csv",header=T)
 ```
 
-|日本名 |star(星座) |month(誕生月) |like_population(星座での割合) |like_parallel(誕生月での割合) |born(誕生月での出生数)|
+|日本名 |star |month |like_population |like_parallel |born|
 |---|:-:|:-:|:-:|:-:|:-:|
 |牡羊座 |Aries |4 |36.6 |36.83333333 |75528|
 |牡牛座 |Taurus |5 |27.3 |30.4 |71898|
@@ -54,6 +54,14 @@ v=read.csv("./data.csv",header=T)
 |山羊座 |Capricornus |1 |31.8 |29.73333333 |81526|
 |水瓶座 |Aquarius |2 |45.6 |41 |77559|
 |魚座 |Pisces |3 |37.3 |40.06666667 |82863|
+
+|column name|description|
+|:-:|:-:|
+|star|星座|
+|month|誕生月|
+|like_population|星座での割合|
+|like_parallel|誕生月での割合|
+|born|誕生月での出生数|
 
 
 ### ② 「心の底から好きになった人がいない」星座の割合が明らかに偏っていることの確認
