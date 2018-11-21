@@ -59,9 +59,9 @@ v=read.csv("./data.csv",header=T)
 |:--|:--|
 |star|星座|
 |month|誕生月|
-|like_population|星座での割合|
-|like_parallel|誕生月での割合|
-|born|誕生月での出生数|
+|like_population|星座単位での「心の底から好きになった人がいない」割合|
+|like_parallel|誕生月単位での「心の底から好きになった人がいない」割合|
+|born|誕生月単位での出生数|
 
 
 ### ② 「心の底から好きになった人がいない」星座の割合が明らかに偏っていることの確認
