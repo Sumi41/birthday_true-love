@@ -56,7 +56,7 @@ v=read.csv("./data.csv",header=T)
 |魚座 |Pisces |3 |37.3 |40.06666667 |82863|
 
 |column name|description|
-|:-:|:-:|
+|:--|:--|
 |star|星座|
 |month|誕生月|
 |like_population|星座での割合|
